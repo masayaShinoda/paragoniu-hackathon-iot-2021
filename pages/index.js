@@ -51,7 +51,7 @@ export default function Home() {
 
       <main className={styles.main}>
         
-        <button onClick={() => {
+        {/* <button onClick={() => {
           setLights(!lights)
           client.items
           .update(itemId, {
@@ -63,18 +63,42 @@ export default function Home() {
           .catch((error) => {
             console.error(error);
           });
-          }}>Switch!</button>
+          }}>Switch!</button> */}
         {/* if state is true, lights on, and vice versa */}
         {
           lights ? <img id="house" src="/lights-on.png" alt=""/> : <img id="house" src="/lights-off.png" alt=""/>
         }
-        
+        <div className="switch-container">
+          <input type="checkbox" id="light-switch"/>
+          <label onClick={() => {
+            setLights(!lights)
+            client.items
+            .update(itemId, {
+              boolean: !lights,
+            })
+            .then((item) => {
+              console.log(item);
+            })
+            .catch((error) => {
+              console.error(error);
+            });
+            
+          }}
+          for="light-switch" id="light-switch-label">
+            <div className="screw"></div>
+            <div className="switch"></div>
+            <div className="screw"></div>
+          </label>
+          <div id="background"></div>
+
+        </div>
+
       </main>
 
       <footer className={styles.footer}>
         <span style={{display: `flex`, alignItems: `center`}}>
           A project by{' '}
-          <img src="/electron-03_result.png" alt="Team Electron" className={styles.logo} />
+          <img src="/logo-no-bg-09_result.png" alt="Team Electron" className={styles.logo} />
         </span>
       </footer>
     </div>
