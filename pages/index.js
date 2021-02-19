@@ -37,17 +37,6 @@ export default function Home() {
     .catch((error) => {
         console.log(error);
     });
-    
-    client.items
-  .update(itemId, {
-    boolean: lights,
-  })
-  .then((item) => {
-    console.log(item);
-  })
-  .catch((error) => {
-    console.error(error);
-  });
 }, [])
 
 
@@ -62,7 +51,19 @@ export default function Home() {
 
       <main className={styles.main}>
         
-        <button onClick={() => setLights(!lights)}>Switch!</button>
+        <button onClick={() => {
+          setLights(!lights)
+          client.items
+          .update(itemId, {
+            boolean: lights,
+          })
+          .then((item) => {
+            console.log(item);
+          })
+          .catch((error) => {
+            console.error(error);
+          });
+          }}>Switch!</button>
         {/* if state is true, lights on, and vice versa */}
         {
           lights ? <img id="house" src="/lights-on.png" alt=""/> : <img id="house" src="/lights-off.png" alt=""/>
