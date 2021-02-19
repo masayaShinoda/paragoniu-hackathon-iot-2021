@@ -1,0 +1,21 @@
+main img {
+  max-width: 100vw;
+}
+
+main button {
+  opacity: 0;
+  position: fixed;
+}
+
+@media (max-width: 480px) {
+  main img {
+    display: none;
+  }
+  main button {
+    opacity: 1;
+    position: absolute;
+    top: 25vh;
+    margin: 0 auto;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

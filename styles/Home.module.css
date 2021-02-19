@@ -8,7 +8,7 @@
 }
 
 .main {
-  padding: 5rem 0;
+  padding:0;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -111,7 +111,7 @@
 }
 
 .logo {
-  height: 1em;
+  height: 6.25em;
 }
 
 @media (max-width: 600px) {
