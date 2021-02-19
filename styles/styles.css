@@ -2,11 +2,6 @@ main img {
   max-width: 100vw;
 }
 
-main button {
-  opacity: 0;
-  position: fixed;
-}
-
 @media (max-width: 480px) {
   main img {
     display: none;
