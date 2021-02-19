@@ -55,7 +55,7 @@ export default function Home() {
           setLights(!lights)
           client.items
           .update(itemId, {
-            boolean: lights,
+            boolean: !lights,
           })
           .then((item) => {
             console.log(item);
