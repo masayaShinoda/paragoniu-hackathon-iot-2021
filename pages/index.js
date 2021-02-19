@@ -5,6 +5,11 @@ import { useCookies } from "react-cookie"
 export default function Home() {
   const token = "36beb28052fa27ba685e891e385a4b";
   const [lights, setLights] = useState((lights) => {return false}); // by default lights are off
+
+  const SiteClient = require("datocms-client").SiteClient;
+  const client = new SiteClient(token);
+  const itemId = "21519068";
+
   useEffect(() => {
     fetch(
         'https://graphql.datocms.com/',
@@ -32,12 +37,8 @@ export default function Home() {
     .catch((error) => {
         console.log(error);
     });
-}, [])
-
-const SiteClient = require("datocms-client").SiteClient;
-const client = new SiteClient(token);
-const itemId = "21519068";
-client.items
+    
+    client.items
   .update(itemId, {
     boolean: lights,
   })
@@ -47,6 +48,10 @@ client.items
   .catch((error) => {
     console.error(error);
   });
+}, [])
+
+
+
 
   return (
     <div className={styles.container}>
