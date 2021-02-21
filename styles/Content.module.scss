@@ -48,12 +48,13 @@
   flex-direction: column;
   .newsGrid {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     // border: 1px solid red;//debug
     div {
       //individual news box
       padding: 1.25vmax;
-      padding-left: 0;
+      // padding-left: 0;
       max-width: 40vw;
       // border: 1px solid blue; //debug
     }
@@ -63,14 +64,16 @@
   }
     
   h1 {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     max-width: 25ch;
-    margin-top: 2.5rem;
+    margin: 1.1rem 0;
+    // margin-top: 2.5rem;
     // bordeR: 1px solid red; //debug
   }
   img {
-    max-width: 30vmax;
+    max-width: 27.5vmax;
     margin: .5rem 0;
+    
   }
   p {
     font-size: 1.1rem;

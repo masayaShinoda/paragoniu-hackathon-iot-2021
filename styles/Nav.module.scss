@@ -1,0 +1,26 @@
+@import "./_variables.scss";
+
+.navBar {
+    width: 100%;
+    display: flex;
+    padding: 0 10vw;
+    padding-top: 2.5vh;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: absolute;
+    top: 0;
+    
+    img {
+        //logo
+        width: 12rem;
+    }
+    ul {
+        display: flex;
+        list-style-type: none;
+        li {
+            margin: 0 1.1rem;
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+    }
+}

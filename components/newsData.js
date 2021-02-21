@@ -1,10 +1,9 @@
 import { useState, useEffect } from "react";
 import styles from "../styles/Content.module.css"
 
-export default function News() {
+export default function NewsData() {
     const [newsData, setNewsData] = useState([]) // by default there is no data
     const [sortedNews, setSortedNews] = useState([])
-    var titles = [];
     // Endpoint 
     const endpointUrl = "https://newsapi.org/v2/everything?language=en&q=cambodia&apiKey=2bd760caf2fa425b8aab168bcaaea952";
   
@@ -32,15 +31,18 @@ export default function News() {
         console.log(sortedNews)
         let z;
         for(z=0;z<sortedNews.length;z++) {
-          var node = document.createElement("DIV");
+          var node = document.createElement("DIV")
           var titleNode = document.createElement("H1")
           titleNode.innerHTML = sortedNews[z]["title"]
+          var linkNode = document.createElement("A")
+          linkNode.href = sortedNews[z]["url"]
+          linkNode.appendChild(titleNode)
           var descriptionNode = document.createElement("P")
           descriptionNode.innerHTML = sortedNews[z]["description"]          
           var imgNode = document.createElement("IMG")
-          imgNode.src = sortedNews[z]["urlToImage"];
-          node.appendChild(titleNode)
+          imgNode.src = sortedNews[z]["urlToImage"]
           node.appendChild(imgNode)
+          node.appendChild(linkNode)
           node.appendChild(descriptionNode)
           document.getElementById("newsGrid").appendChild(node)
         }
@@ -53,9 +55,8 @@ export default function News() {
     return (
       <>
         <div className={styles.newsContainer}>         
-           {newsData ? <h1 style={{fontSize: `3.25rem;`}} id="news">News</h1> : null}
-           <div id="newsGrid" className={styles.newsGrid}>
-
+           {newsData ? <h1 style={{fontSize: `3.25rem`, margin: `1.1rem auto`, maxWidth: `fit-content`}} id="news">News</h1> : null}
+           <div id="newsGrid" className={styles.newsGrid}>            
            </div>
         </div>         
       </>

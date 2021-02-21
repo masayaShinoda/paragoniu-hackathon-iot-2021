@@ -1,5 +1,7 @@
 import Head from 'next/head'
-import Content from "../components/content"
+import Nav from "../components/nav"
+import CovidData from "../components/covidData"
+
 import styles from '../styles/Home.module.css'
 import { useCookies } from "react-cookie"
 
@@ -10,11 +12,10 @@ export default function Home() {
         <title>Team Electron</title>
         <link rel="icon" href="/electron-03_result.png" />
       </Head>
-
+      <Nav />
       <main className={styles.main}>
-        <Content />
+        <CovidData />
       </main>
-
       <footer className={styles.footer}>
         <span style={{display: `flex`, alignItems: `center`}}>
           A project by{' '}
