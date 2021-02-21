@@ -53,11 +53,11 @@ export default function CovidData() {
                     <td>{countryData ? <h1>{countryData.deaths}</h1> : null}</td>
                 </tr>
             </table>
-            <iframe className={styles.covidMap} src="https://covid19-map.cdcmoh.gov.kh/?display_mode=map"></iframe>
+            <iframe className={styles.covidMap} src="https://covid19-map.cdcmoh.gov.kh/?display_mode=map" style={{margin:`0 auto`}}></iframe>
             </div>
             <div style={{marginTop: `4.25vh`}}>
                 <h1>By province:</h1>
-                <iframe id={styles.provincesTable} src="https://covid19-map.cdcmoh.gov.kh/list_views" style={{width: 400, height: 480, border: 0,}}></iframe>
+                <iframe id={styles.provincesTable} src="https://covid19-map.cdcmoh.gov.kh/list_views" style={{margin: `0 auto`, width: 400, height: 480, border: 0,}}></iframe>
             </div>
         </>
 
