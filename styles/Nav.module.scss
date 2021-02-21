@@ -9,7 +9,6 @@
     align-items: flex-end;
     position: absolute;
     top: 0;
-    
     img {
         //logo
         width: 12rem;
@@ -21,6 +20,26 @@
             margin: 0 1.1rem;
             font-size: 1.25rem;
             font-weight: 600;
+            text-transform: uppercase;
+            a {
+                font-family: $head;
+                font-weight: 800;
+            }
+        }
+    }
+}
+@media (max-width: $mobile-bp) {
+    .navBar {
+        padding: 0;
+        padding-top: 5vh;
+
+        ul {
+            flex-direction: column;
+            align-items: flex-end;
+            margin-right: 1.1rem;
+            li {
+                margin: 0.25rem 0;
+            }
         }
     }
 }

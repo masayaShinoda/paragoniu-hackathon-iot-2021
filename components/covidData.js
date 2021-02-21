@@ -5,11 +5,9 @@ export default function CovidData() {
     
     const [countryData, setCountryData] = useState((countryData) => {return false}); // by default there is no data
     // Endpoint 
-    const endpointUrl = "https://covid-19-data.p.rapidapi.com/country/code?code=kh";
-    
+    const endpointUrl = "https://covid-19-data.p.rapidapi.com/country/code?code=kh";    
     // RapidAPI host
-    const rapidApiHost = "covid-19-data.p.rapidapi.com";
-    
+    const rapidApiHost = "covid-19-data.p.rapidapi.com";    
     // YOUR RapidAPI key
     const rapidApiKey = "522fadb7e0mshcc78c11a5b0011fp1084a1jsnfbd23d4c88d9";
     

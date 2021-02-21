@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;600;700;800&display=swap");
 .navBar {
   width: 100%;
   display: -webkit-box;
@@ -30,5 +32,31 @@
   margin: 0 1.1rem;
   font-size: 1.25rem;
   font-weight: 600;
+  text-transform: uppercase;
+}
+
+.navBar ul li a {
+  font-family: "Karla", sans-serif;
+  font-weight: 800;
+}
+
+@media (max-width: 480px) {
+  .navBar {
+    padding: 0;
+    padding-top: 5vh;
+  }
+  .navBar ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    margin-right: 1.1rem;
+  }
+  .navBar ul li {
+    margin: 0.25rem 0;
+  }
 }
 /*# sourceMappingURL=Nav.module.css.map */
