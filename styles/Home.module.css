@@ -19,11 +19,12 @@
   max-width: 80vw;
   margin: 0 auto;
   margin-top: 20vh;
+  padding: 2.5vh 0;
 }
 
 @media (max-width: 480px) {
   .container {
-    max-width: 100vw;
+    max-width: 90vw;
   }
 }
 

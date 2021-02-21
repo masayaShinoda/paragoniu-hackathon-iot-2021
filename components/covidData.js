@@ -34,7 +34,7 @@ export default function CovidData() {
 
     return (
         <>
-            <div>
+            <div className={styles.contentContainer}>
             {countryData ? <h1>{countryData.country} Covid-19 Info</h1> : null}
             <span>
                 <p><a href="https://covid-19-data.p.rapidapi.com">API</a>, Sources: cdcmoh.gov.kh, Johns Hopkins CSSE, CDC, WHO, etc...</p>
@@ -57,7 +57,7 @@ export default function CovidData() {
             </div>
             <div style={{marginTop: `4.25vh`}}>
                 <h1>By province:</h1>
-                <iframe id={styles.provincesTable} src="https://covid19-map.cdcmoh.gov.kh/list_views" style={{width: 420, height: 480, border: 0,}}></iframe>
+                <iframe id={styles.provincesTable} src="https://covid19-map.cdcmoh.gov.kh/list_views" style={{width: 400, height: 480, border: 0,}}></iframe>
             </div>
         </>
 
