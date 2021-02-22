@@ -4,10 +4,15 @@ import Nav from "../components/nav"
 export default function Emergency() {
     return (
         <> 
-            <Head>
-                <title>Team Electron</title>
-                <link rel="icon" href="/electron-03_result.png" />
-            </Head>
+        <Head>
+            <title>InfoCov | Emergency Contacts</title>
+            <link rel="icon" href="/electron-03_result.png" />
+            <link rel="manifest" href="manifest.json" />
+            <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
+            <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png" />
+            <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png" />
+            <link rel="manifest" href="/icons/site.webmanifest" />
+        </Head>
             <Nav />
             <div className={styles.contentContainer} style={{marginTop: `25vh`}}>
                 <h1 style={{width: `100%`, textAlign: `center`}}>Emergency Contacts</h1>

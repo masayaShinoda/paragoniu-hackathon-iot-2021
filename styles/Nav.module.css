@@ -34,7 +34,6 @@
   margin: 0 1.1rem;
   font-size: 1.25rem;
   font-weight: 600;
-  text-transform: uppercase;
 }
 
 .navBar ul li a {
@@ -48,7 +47,7 @@
       -ms-flex-align: center;
           align-items: center;
   font-family: "Karla", "Koulen", sans-serif;
-  font-weight: 800;
+  font-weight: 600;
 }
 
 .navBar ul li a svg {

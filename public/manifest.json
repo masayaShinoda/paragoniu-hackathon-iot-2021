@@ -1,0 +1,8 @@
+{
+    "name": "InfoCov",
+    "short_name": "InfoCov",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#5B2EC5",
+    "description": "Covid-19 information app for Cambodian audiences."
+  }

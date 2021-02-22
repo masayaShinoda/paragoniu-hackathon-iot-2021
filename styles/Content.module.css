@@ -186,6 +186,12 @@
 }
 
 .emergencyContainer td a {
+  padding: 0 .5rem;
+  font-weight: 600;
+}
+
+.emergencyContainer td a:nth-of-type(2n) {
+  border-left: 1px solid #333333;
   border-right: 1px solid #333333;
 }
 
