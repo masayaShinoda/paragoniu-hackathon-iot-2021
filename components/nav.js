@@ -6,9 +6,13 @@ export default function Nav() {
             <a href="/">
                 <img src="/logo-12_result.png" alt="InfoCov"/>            
             </a>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/emergency">Emergency</a></li>                
+            <ul>                
+                
+                <li><a href="/">News</a></li>
+                <li><a href="/">Store</a></li>
+                <li><a href="/emergency">Emergency</a></li>
+                {/* <li><a href="/emergency">លេខ​ទំនាក់ទំនង​បន្ទាន់</a></li>                
+                {/* <li><a href="/">ទំព័រដើម</a></li> */}
             </ul>
         </nav>
     )

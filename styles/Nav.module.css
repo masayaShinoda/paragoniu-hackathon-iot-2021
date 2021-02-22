@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Koulen&display=swap");
 .navBar {
   width: 100%;
   display: -webkit-box;
@@ -36,7 +37,7 @@
 }
 
 .navBar ul li a {
-  font-family: "Karla", sans-serif;
+  font-family: "Karla", "Koulen", sans-serif;
   font-weight: 800;
 }
 

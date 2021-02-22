@@ -42,6 +42,32 @@ export default function Emergency() {
                     </tr>
                 </tbody>
                 </table>
+                <div className={styles.mobileEmergency}>
+                    <span>
+                        <img src="/logo_150dp_embossi.png" alt="police-logo"/>
+                        <a href="tel:0977780002">
+                          097 778 0002 
+                        </a>
+                    </span>
+                    <span>
+                        <img src="/MOH_logo.png" alt="moh-logo"/>
+                        <span>
+                            <a href="tel:115">
+                            <img src="/—Pngtree—phone icon in solid circle_5552270.png" />
+                            115
+                            </a>
+                            <a href="tel:012825424">
+                            <img src="/—Pngtree—phone icon in solid circle_5552270.png" />
+                            012 825 424
+                            </a>
+                            <a href="tel:012488868">
+                            <img src="/—Pngtree—phone icon in solid circle_5552270.png" />
+                            012 488 868    
+                            </a>
+                        </span>
+                    </span>
+                    
+                </div>
             </div>
         </>
     )
