@@ -11,6 +11,7 @@ export default function Home() {
       <Head>
         <title>Team Electron</title>
         <link rel="icon" href="/electron-03_result.png" />
+        <link rel="manifest" href="manifest.json"></link>
       </Head>
       <Nav />
       <div className={contentStyles.contentContainer}>
