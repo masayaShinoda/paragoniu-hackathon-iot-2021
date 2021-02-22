@@ -19,6 +19,8 @@ export default function Home() {
       </Head>
       <Nav />
       <div className={contentStyles.contentContainer}>
+        <img src="/logo-12_result.png"></img>
+        <h1 style={{marginTop: 0}}>Information you can trust.</h1>
         <CovidData />
         
       </div>

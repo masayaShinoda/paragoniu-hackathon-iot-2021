@@ -35,7 +35,7 @@ export default function CovidData() {
     return (
         <>
             <div className={styles.contentContainer}>
-            {countryData ? <h1 style={{fontSize: `3.25rem`, margin: `1.1rem auto`, maxWidth: `fit-content`}}>Covid-19 Info {countryData.country}</h1> : null}
+            {countryData ? <h1 style={{fontSize: `3.25rem`, margin: `1.1rem auto`, maxWidth: `fit-content`}}>{countryData.country} Covid-19 Data</h1> : null}
             <span>
                 <p><a href="https://rapidapi.com/Gramzivi/api/covid-19-data">API</a>, Sources: cdcmoh.gov.kh, Johns Hopkins CSSE, CDC, WHO, etc...</p>
             </span>
