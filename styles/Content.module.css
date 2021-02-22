@@ -137,7 +137,6 @@
 
 .newsContainer h1 {
   font-family: "Karla", "Koulen", sans-serif;
-  font-weight: 600;
   font-size: 1.75rem;
   max-width: 21ch;
   margin: 1.1rem 0;
@@ -149,6 +148,7 @@
 }
 
 .newsContainer p {
+  font-family: "Overpass", "Hanuman", sans-serif;
   font-size: 1.1rem;
   max-width: 40ch;
   margin: .8rem 0;

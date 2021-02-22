@@ -109,7 +109,7 @@
     
   h1 {
     font-family: $head;
-    font-weight: 600;
+    // font-weight: 600;
     font-size: 1.75rem;
     max-width: 21ch;
     margin: 1.1rem 0;
@@ -121,6 +121,7 @@
     margin: .5rem 0;    
   }
   p {
+    font-family: $body;
     font-size: 1.1rem;
     max-width: 40ch;
     margin: .8rem 0;
