@@ -1,5 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;600;700;800&display=swap");
+.contentContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding: 0 10vw;
+}
+
 @media (max-width: 480px) {
   .contentContainer {
     display: -webkit-box;
@@ -104,5 +122,19 @@
   font-size: 1.1rem;
   max-width: 40ch;
   margin: .8rem 0;
+}
+
+.emergencyContainer {
+  border-collapse: collapse;
+}
+
+.emergencyContainer td a {
+  border-right: 1px solid #333333;
+}
+
+.emergencyContainer td, .emergencyContainer th {
+  border: 1px solid #999;
+  padding: 0.5rem;
+  text-align: left;
 }
 /*# sourceMappingURL=Content.module.css.map */

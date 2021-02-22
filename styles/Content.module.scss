@@ -1,6 +1,15 @@
 @import "./_variables.scss";
 
 
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0 10vw;
+}
+
 @media (max-width: $mobile-bp) {
   .contentContainer {
     display: flex;
@@ -80,5 +89,17 @@
     font-size: 1.1rem;
     max-width: 40ch;
     margin: .8rem 0;
+  }
+}
+
+.emergencyContainer {
+  border-collapse: collapse;
+  td a {
+    border-right: 1px solid #333333;
+  }
+  td, th {
+    border: 1px solid #999;
+    padding: 0.5rem;
+    text-align: left;
   }
 }

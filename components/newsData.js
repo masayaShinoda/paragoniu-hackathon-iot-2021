@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import styles from "../styles/Content.module.css"
 
 export default function NewsData() {
+  //newsapi key from email 2bd760caf2fa425b8aab168bcaaea952
+
     const [newsData, setNewsData] = useState([]) // by default there is no data
     const [sortedNews, setSortedNews] = useState([])    
 
