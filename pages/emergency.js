@@ -46,9 +46,12 @@ export default function Emergency() {
                 <div className={styles.mobileEmergency}>
                     <span>
                         <img src="/logo_150dp_embossi.png" alt="police-logo"/>
-                        <a href="tel:0977780002">
-                          097 778 0002 
-                        </a>
+                        <span>
+                            <a href="tel:0977780002">
+                            097 778 0002 
+                            </a>
+
+                        </span>
                     </span>
                     <span>
                         <img src="/MOH_logo.png" alt="moh-logo"/>
