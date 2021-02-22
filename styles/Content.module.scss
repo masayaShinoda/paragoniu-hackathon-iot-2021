@@ -16,7 +16,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 90vw;
+    padding: 0 5vw;
+    // max-width: 90vw;
 
   }
 }
@@ -48,8 +49,11 @@
   width: 480px;
   height: 360px;
   @media (max-width: $mobile-bp) {
-    width: 100vw;
-    padding: 0 5vw;
+    width: 90vw;
+    padding: 0; 
+    
+    // margin: 0 auto;
+
   }
 }
 
@@ -94,12 +98,25 @@
 
 .emergencyContainer {
   border-collapse: collapse;
+  th {
+  background-color: #5B2EC5;
+    color: #fcfcfc;
+  }
   td a {
     border-right: 1px solid #333333;
+  }
+  td a:last-of-type {
+    border: none;
   }
   td, th {
     border: 1px solid #999;
     padding: 0.5rem;
     text-align: left;
+  }
+}
+@media (max-width: $mobile-bp) {
+  .emergencyContainer {
+    max-width: 90vw;
+    border: 1px solid red;
   }
 }

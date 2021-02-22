@@ -33,7 +33,7 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    max-width: 90vw;
+    padding: 0 5vw;
   }
 }
 
@@ -72,8 +72,8 @@
 
 @media (max-width: 480px) {
   .covidMap {
-    width: 100vw;
-    padding: 0 5vw;
+    width: 90vw;
+    padding: 0;
   }
 }
 
@@ -128,13 +128,29 @@
   border-collapse: collapse;
 }
 
+.emergencyContainer th {
+  background-color: #5B2EC5;
+  color: #fcfcfc;
+}
+
 .emergencyContainer td a {
   border-right: 1px solid #333333;
+}
+
+.emergencyContainer td a:last-of-type {
+  border: none;
 }
 
 .emergencyContainer td, .emergencyContainer th {
   border: 1px solid #999;
   padding: 0.5rem;
   text-align: left;
+}
+
+@media (max-width: 480px) {
+  .emergencyContainer {
+    max-width: 90vw;
+    border: 1px solid red;
+  }
 }
 /*# sourceMappingURL=Content.module.css.map */
