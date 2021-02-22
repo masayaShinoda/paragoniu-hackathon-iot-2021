@@ -97,8 +97,9 @@ export default function NewsData() {
       <>
       <div className={styles.contentContainer}>
 
-        <div className={styles.newsContainer}>         
            {newsData ? <h1 style={{fontSize: `3.25rem`, margin: `1.1rem auto`, maxWidth: `fit-content`}} id="news">News</h1> : null}
+           <h2 style={{color: `#353535`,margin: `0 auto`}}>(Demo)</h2>
+        <div className={styles.newsContainer}>         
            <div id="newsGrid" className={styles.newsGrid}>    
               {newsData &&
                 newsData.map(data => {

@@ -1,51 +1,166 @@
 @import "./_variables.scss";
 
-.navBar {
+.navParent {
+    width: 100%;
+}
+//on desktop nav button hidden
+.openNavBtn, .closeNavBtn {
+    display: none;
+}
+.navContainer {
     width: 100%;
     display: flex;
-    padding: 0 10vw;
-    padding-top: 2.5vh;
     justify-content: space-between;
+    // align-items: center;
     align-items: flex-end;
-    position: absolute;
+    padding: 2.5vh 10vw;
+    position: fixed;
     top: 0;
-    img {
-        //logo
-        width: 12rem;
+    background: #fcfcfc;
+    // padding: 0 10vw;
+    // padding-top: 4.25vh;
+    // background: rgba(0,0,0,.425);
+    .logo {
+        min-width: 22.5vmin;
+        // max-width: 35vmin;
+        max-width: 22.5vmin;
     }
-    ul {
-        display: flex;
-        list-style-type: none;
-        li {
-            margin: 0 1.1rem;
+    nav {      
+        display: flex;  
+        a {
+            display: flex;
+            max-width: fit-content;
+            // flex-direction: row;
+            align-items: center;
+            font-family: $head;
             font-size: 1.25rem;
+            margin: 0 .8rem;
+            transition: .2s ease-in;
             font-weight: 600;
-            // text-transform: uppercase;
-            a {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                font-family: $head;
-                font-weight: 600;
-                svg {
-                    max-width: 1.25rem;
-                    margin-right: .5rem;
+            svg {
+                max-width: 1.25rem;
+                margin-right: .5rem;
+            }       
+        }
+        a:hover {
+            color: #999;
+        }
+        .navDropDown {
+            padding: 0;
+            // border: 1px solid red; //debug
+            .dropDown {
+                display: none; //hidden by default
+                padding: .5vmax ;
+                margin-top: -.25vmax;
+                position: absolute;
+                width: fit-content;
+                max-width: fit-content;
+                flex-direction: column;
+                align-items: flex-end;
+                // border: 1px solid green; //debug
+                list-style-type: none;          
+                // background: rgba(0,0,0,.625);    
+                li:hover {
+                    background: rgba(245,245,245,.625);
+                    a {
+                        color: #212121;
+                        text-overflow: clip;
+                        overflow: visible;
+                    }
                 }
             }
+        }
+        .navDropDown:active, .navDropDown:hover, .navDropDown:focus  {
+            padding-bottom: 2.5vmax;
+            // border: 1px solid blue; //debug
+        }
+        .navDropDown:active .dropdown, .navDropDown:hover .dropDown, .navDropDown:focus .dropDown {
+            display: flex;
         }
     }
 }
 @media (max-width: $mobile-bp) {
-    .navBar {
-        padding: 0;
-        padding-top: 5vh;
+    .logoBtn {
+        display: none;
+    }
+    .openNavBtn, .closeNavBtn {   
+        position: fixed;
+        top: 5vh;
+        left: 10vw;
+        color: #fcfcfc;
+        font-size: 1.2rem;
+        width: 9.375vmax; 
+        height: 9.375vmax;
+        border-radius: 100%;
+        background: #5B2EC5;
 
-        ul {
+        border: 0;
+        span {
+            display: block;
+            margin: 10% auto;
+            width: 3.75vmax;
+            height: 0.375vmax;
+            border-radius: 0.5vmax;
+            background: #fcfcfc;
+        }
+    }
+    .openNavBtn {
+        display: block;
+    }
+    .closeNavBtn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // border: 1px solid red; //debug
+        div {
+            // position: fixed;
+            // border: 1px solid blue; //debug
+            span {
+                display: block;
+                margin: 0 auto;
+                transform:  rotate(45deg);                
+            }
+            span:nth-of-type(2n) {            
+                background: #fcfcfc;
+                transform: translateY(-0.25vmax) rotate(135deg);    
+            }
+        }
+    }
+    .navContainer {
+        display: none;
+        background: none;
+        nav {
+            display: flex;
             flex-direction: column;
-            align-items: flex-end;
-            margin-right: 1.1rem;
-            li {
-                margin: 0.25rem 0;
+            position: fixed;
+            top: 12.5vh;
+            background: #5B2EC5;
+            padding-left: 2.5vmax;
+            a, .navDropDown{
+                padding: 2.5vmax 1.5vmax;
+                margin-left: -1.5vmax;
+                // border: 1px solid red; //debug
+                min-width: 65vw;
+                color: #fcfcfc;
+                svg {
+                    margin-right: .5rem;
+                }
+            }
+            .navDropDown {
+                padding-top: 0 !important;
+                padding-bottom: 0 !important;
+                a {
+                    margin-right: -1.5vmax;
+                }
+                .dropDown {
+                    display: none;
+                }
+            }
+            .navDropDown:hover {
+                padding: 2.5vmax 1.5vmax;
+            }
+            .navDropDown:active .dropdown, .navDropDown:hover .dropDown, .navDropDown:focus .dropDown {
+                display: none;
             }
         }
     }

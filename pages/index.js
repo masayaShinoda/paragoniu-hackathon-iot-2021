@@ -10,7 +10,7 @@ export default function Home() {
     <div className={styles.container}>
       <Head>
         <title>InfoCov | Home</title>
-        <link rel="icon" href="/electron-03_result.png" />
+        {/* <link rel="icon" href="/electron-03_result.png" /> */}
         <link rel="manifest" href="manifest.json" />
         <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png" />

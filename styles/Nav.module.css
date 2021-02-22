@@ -2,76 +2,204 @@
 @import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Koulen&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Hanuman:wght@400;700&display=swap");
-.navBar {
+.navParent {
+  width: 100%;
+}
+
+.openNavBtn, .closeNavBtn {
+  display: none;
+}
+
+.navContainer {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 0 10vw;
-  padding-top: 2.5vh;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  position: absolute;
+  padding: 2.5vh 10vw;
+  position: fixed;
   top: 0;
+  background: #fcfcfc;
 }
 
-.navBar img {
-  width: 12rem;
+.navContainer .logo {
+  min-width: 22.5vmin;
+  max-width: 22.5vmin;
 }
 
-.navBar ul {
+.navContainer nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  list-style-type: none;
 }
 
-.navBar ul li {
-  margin: 0 1.1rem;
-  font-size: 1.25rem;
-  font-weight: 600;
-}
-
-.navBar ul li a {
+.navContainer nav a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   font-family: "Karla", "Koulen", sans-serif;
+  font-size: 1.25rem;
+  margin: 0 .8rem;
+  -webkit-transition: .2s ease-in;
+  transition: .2s ease-in;
   font-weight: 600;
 }
 
-.navBar ul li a svg {
+.navContainer nav a svg {
   max-width: 1.25rem;
   margin-right: .5rem;
 }
 
+.navContainer nav a:hover {
+  color: #999;
+}
+
+.navContainer nav .navDropDown {
+  padding: 0;
+}
+
+.navContainer nav .navDropDown .dropDown {
+  display: none;
+  padding: .5vmax;
+  margin-top: -.25vmax;
+  position: absolute;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  list-style-type: none;
+}
+
+.navContainer nav .navDropDown .dropDown li:hover {
+  background: rgba(245, 245, 245, 0.625);
+}
+
+.navContainer nav .navDropDown .dropDown li:hover a {
+  color: #212121;
+  text-overflow: clip;
+  overflow: visible;
+}
+
+.navContainer nav .navDropDown:active, .navContainer nav .navDropDown:hover, .navContainer nav .navDropDown:focus {
+  padding-bottom: 2.5vmax;
+}
+
+.navContainer nav .navDropDown:active .dropdown, .navContainer nav .navDropDown:hover .dropDown, .navContainer nav .navDropDown:focus .dropDown {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 @media (max-width: 480px) {
-  .navBar {
-    padding: 0;
-    padding-top: 5vh;
+  .logoBtn {
+    display: none;
   }
-  .navBar ul {
+  .openNavBtn, .closeNavBtn {
+    position: fixed;
+    top: 5vh;
+    left: 10vw;
+    color: #fcfcfc;
+    font-size: 1.2rem;
+    width: 9.375vmax;
+    height: 9.375vmax;
+    border-radius: 100%;
+    background: #5B2EC5;
+    border: 0;
+  }
+  .openNavBtn span, .closeNavBtn span {
+    display: block;
+    margin: 10% auto;
+    width: 3.75vmax;
+    height: 0.375vmax;
+    border-radius: 0.5vmax;
+    background: #fcfcfc;
+  }
+  .openNavBtn {
+    display: block;
+  }
+  .closeNavBtn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .closeNavBtn div span {
+    display: block;
+    margin: 0 auto;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  .closeNavBtn div span:nth-of-type(2n) {
+    background: #fcfcfc;
+    -webkit-transform: translateY(-0.25vmax) rotate(135deg);
+            transform: translateY(-0.25vmax) rotate(135deg);
+  }
+  .navContainer {
+    display: none;
+    background: none;
+  }
+  .navContainer nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
-    margin-right: 1.1rem;
+    position: fixed;
+    top: 12.5vh;
+    background: #5B2EC5;
+    padding-left: 2.5vmax;
   }
-  .navBar ul li {
-    margin: 0.25rem 0;
+  .navContainer nav a, .navContainer nav .navDropDown {
+    padding: 2.5vmax 1.5vmax;
+    margin-left: -1.5vmax;
+    min-width: 65vw;
+    color: #fcfcfc;
+  }
+  .navContainer nav a svg, .navContainer nav .navDropDown svg {
+    margin-right: .5rem;
+  }
+  .navContainer nav .navDropDown {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  .navContainer nav .navDropDown a {
+    margin-right: -1.5vmax;
+  }
+  .navContainer nav .navDropDown .dropDown {
+    display: none;
+  }
+  .navContainer nav .navDropDown:hover {
+    padding: 2.5vmax 1.5vmax;
+  }
+  .navContainer nav .navDropDown:active .dropdown, .navContainer nav .navDropDown:hover .dropDown, .navContainer nav .navDropDown:focus .dropDown {
+    display: none;
   }
 }
 /*# sourceMappingURL=Nav.module.css.map */

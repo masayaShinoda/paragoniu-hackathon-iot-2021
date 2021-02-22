@@ -16,8 +16,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-width: 100%;
-  max-width: 100%;
+  max-width: 100vw;
   padding: 0 5vw;
 }
 
@@ -304,5 +303,12 @@
   font-size: 2rem;
   font-weight: 700;
   color: #5B2EC5;
+}
+
+@media (max-width: 480px) {
+  .productContainer img {
+    max-width: 25vw;
+    max-height: 25vw;
+  }
 }
 /*# sourceMappingURL=Content.module.css.map */

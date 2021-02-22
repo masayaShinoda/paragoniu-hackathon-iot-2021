@@ -37,7 +37,7 @@ export default function CovidData() {
             <div className={styles.contentContainer}>
             {countryData ? <h1 style={{fontSize: `3.25rem`, margin: `1.1rem auto`, maxWidth: `fit-content`}}>Covid-19 Info {countryData.country}</h1> : null}
             <span>
-                <p><a href="https://covid-19-data.p.rapidapi.com">API</a>, Sources: cdcmoh.gov.kh, Johns Hopkins CSSE, CDC, WHO, etc...</p>
+                <p><a href="https://rapidapi.com/Gramzivi/api/covid-19-data">API</a>, Sources: cdcmoh.gov.kh, Johns Hopkins CSSE, CDC, WHO, etc...</p>
             </span>
             <table className={styles.dataTable}>
                 <tr>
@@ -55,9 +55,9 @@ export default function CovidData() {
             </table>
             <iframe className={styles.covidMap} src="https://covid19-map.cdcmoh.gov.kh/?display_mode=map" style={{margin:`0 auto`}}></iframe>
             </div>
-            <div style={{marginTop: `4.25vh`}}>
-                <h1>By province:</h1>
-                <iframe id={styles.provincesTable} src="https://covid19-map.cdcmoh.gov.kh/list_views" style={{margin: `0 auto`, width: 400, height: 480, border: 0,}}></iframe>
+            <div style={{marginTop: `4.25vh`, alignItems: `center`}}>
+                <h1 style={{margin: `0 auto`}}>By province:</h1>
+                <iframe id={styles.provincesTable} src="https://covid19-map.cdcmoh.gov.kh/list_views" style={{margin: `0 auto`, width: 380, height: 480, border: 0,}}></iframe>
             </div>
         </>
 

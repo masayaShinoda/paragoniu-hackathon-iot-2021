@@ -8,7 +8,7 @@ export default function News() {
       <>
         <Head>
           <title>InfoCov | News</title>
-          <link rel="icon" href="/electron-03_result.png" />
+          {/* <link rel="icon" href="/electron-03_result.png" /> */}
           <link rel="manifest" href="manifest.json" />
           <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
           <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png" />

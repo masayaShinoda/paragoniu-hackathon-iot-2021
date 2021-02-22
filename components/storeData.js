@@ -54,8 +54,7 @@ export default function StoreData() {
                 productContainer.appendChild(imageNode)
                 productContainer.appendChild(spanNode)
                 document.getElementById("products").appendChild(productContainer)
-          }               
-
+          }
       })
       .catch((error) => {
           console.log(error);
@@ -64,6 +63,7 @@ export default function StoreData() {
 
   return (
       <div className={styles.contentContainer}>
+          <h2 style={{color: `#353535`, margin: `0 auto`}}>(Demo)</h2>
           <div className={styles.productsParent} id="products"></div>
       </div>
   )
