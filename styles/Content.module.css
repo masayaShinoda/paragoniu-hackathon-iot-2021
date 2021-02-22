@@ -33,7 +33,7 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding: 0 5vw;
+    padding: 0;
   }
 }
 
@@ -72,7 +72,8 @@
 
 @media (max-width: 480px) {
   .covidMap {
-    width: 90vw;
+    width: 90vw !important;
+    margin: 0;
     padding: 0;
   }
 }

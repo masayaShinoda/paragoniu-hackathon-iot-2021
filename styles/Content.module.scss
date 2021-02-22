@@ -16,7 +16,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0 5vw;
+    padding: 0;
+    
     // max-width: 90vw;
 
   }
@@ -48,12 +49,13 @@
 .covidMap {
   width: 480px;
   height: 360px;
-  @media (max-width: $mobile-bp) {
-    width: 90vw;
-    padding: 0; 
-    
+}
+@media (max-width: $mobile-bp) {
+  .covidMap {    
+    width: 90vw !important;
+    margin: 0;
+    padding: 0;    
     // margin: 0 auto;
-
   }
 }
 
