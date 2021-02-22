@@ -4,25 +4,47 @@ import styles from "../styles/Content.module.css"
 export default function NewsData() {
   //newsapi key from email 2bd760caf2fa425b8aab168bcaaea952
 
-    const [newsData, setNewsData] = useState([]) // by default there is no data
-    const [sortedNews, setSortedNews] = useState([])    
+    const [newsData, setNewsData] = useState(newsData => {return null}) // by default there is no data
+    // const [sortedNews, setSortedNews] = useState([])    
+
+    const token = "1aba1486566a62c0038c56e3fc5fe6";
 
     useEffect(() => {
-      fetch("https://covid-19-news.p.rapidapi.com/v1/covid?q=covid&lang=en&media=True", {
-        "method": "GET",
-        "headers": {
-          "x-rapidapi-key": "7ddd63c600mshbaf6d24f3e0f5a5p16f3a8jsn964e032214df",
-          "x-rapidapi-host": "covid-19-news.p.rapidapi.com",
-          "content-type": "application/json"
-        }
+      fetch(
+          'https://graphql.datocms.com/',
+          {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json',
+              'Authorization': `Bearer ${token}`,
+            },
+            body: JSON.stringify({
+              query: `{ 
+                  allArticles {
+                    title
+                    source
+                    link
+                    id
+                    description
+                    image {
+                      url
+                      alt
+                    }
+                  }
+                }`
+            }),
+          }
+      )
+      .then(res => res.json())
+      .then((res) => {
+          setNewsData(res.data["allArticles"])
+          console.log(res.data["allArticles"])
       })
-      .then(response => {
-        console.log(response);
-      })
-      .catch(err => {
-        console.error(err);
+      .catch((error) => {
+          console.log(error);
       });
-    })
+  }, [])
 
     // const endpointUrl = "https://newsapi.org/v2/everything?language=en&q=cambodia&apiKey=2bd760caf2fa425b8aab168bcaaea952";
   
@@ -75,7 +97,23 @@ export default function NewsData() {
       <>
         <div className={styles.newsContainer}>         
            {newsData ? <h1 style={{fontSize: `3.25rem`, margin: `1.1rem auto`, maxWidth: `fit-content`}} id="news">News</h1> : null}
-           <div id="newsGrid" className={styles.newsGrid}>            
+           <div id="newsGrid" className={styles.newsGrid}>    
+              {newsData &&
+                newsData.map(data => {
+                  return (
+                    <div>
+                      {data.image ? 
+                        <img src={data.image.url} alt={data.image.alt} />
+                        : null
+                      }
+                      <a href={data.link}>
+                        <h1>{data.title}</h1>
+                      </a>
+                      <p>{data.description}</p>
+                    </div>
+                  )
+                })
+              }        
            </div>
         </div>         
       </>

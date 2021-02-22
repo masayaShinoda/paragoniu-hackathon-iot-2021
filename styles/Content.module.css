@@ -110,15 +110,37 @@
   margin-left: 3.25vmax;
 }
 
+@media (max-width: 480px) {
+  .newsContainer .newsGrid div {
+    width: 80vw;
+    max-width: 90vw;
+  }
+  .newsContainer .newsGrid div:nth-of-type(2n) {
+    margin-left: 0;
+  }
+}
+
 .newsContainer h1 {
+  font-family: "Karla", "Koulen", sans-serif;
+  font-weight: 600;
   font-size: 1.75rem;
-  max-width: 25ch;
+  max-width: 21ch;
   margin: 1.1rem 0;
 }
 
 .newsContainer img {
   max-width: 27.5vmax;
   margin: .5rem 0;
+}
+
+@media (max-width: 480px) {
+  .newsContainer h1 {
+    font-size: 1.5rem;
+    max-width: 90vw;
+  }
+  .newsContainer img {
+    max-width: 75vw;
+  }
 }
 
 .newsContainer p {

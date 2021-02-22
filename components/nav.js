@@ -8,7 +8,7 @@ export default function Nav() {
             </a>
             <ul>                
                 
-                <li><a href="/">News</a></li>
+                <li><a href="/news">News</a></li>
                 <li><a href="/">Store</a></li>
                 <li><a href="/emergency">Emergency</a></li>
                 {/* <li><a href="/emergency">លេខ​ទំនាក់ទំនង​បន្ទាន់</a></li>                
