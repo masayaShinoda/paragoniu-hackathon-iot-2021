@@ -10,6 +10,7 @@ export default function Emergency() {
             </Head>
             <Nav />
             <div className={styles.contentContainer} style={{marginTop: `25vh`}}>
+                <h1 style={{width: `100%`, textAlign: `center`}}>Emergency Contacts</h1>
                 <table className={styles.emergencyContainer}>
                 <thead>
                     <tr>
