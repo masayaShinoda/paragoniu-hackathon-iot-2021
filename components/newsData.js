@@ -110,6 +110,9 @@ export default function NewsData() {
                         <h1>{data.title}</h1>
                       </a>
                       <p>{data.description}</p>
+                      {data.source ? 
+                        <p style={{fontSize: `.8rem`, fontStyle: `italic`}}>Source: {data.source}</p>
+                      : null}
                     </div>
                   )
                 })

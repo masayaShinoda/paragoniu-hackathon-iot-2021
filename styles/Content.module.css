@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Koulen&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hanuman:wght@400;700&display=swap");
 .contentContainer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -103,11 +104,25 @@
 
 .newsContainer .newsGrid div {
   padding: 1.25vmax;
-  max-width: 40vw;
+  max-width: 35vw;
 }
 
 .newsContainer .newsGrid div:nth-of-type(2n) {
-  margin-left: 3.25vmax;
+  margin-left: 1.5vmax;
+}
+
+@media (max-width: 1023px) {
+  .newsContainer .newsGrid div {
+    width: 35vw;
+    max-width: 35vw;
+    padding: 1.25vmin;
+  }
+  .newsContainer .newsGrid div img {
+    margin: 0;
+  }
+  .newsContainer .newsGrid div:nth-of-type(2n) {
+    margin-left: 3.25vmax;
+  }
 }
 
 @media (max-width: 480px) {
@@ -133,20 +148,32 @@
   margin: .5rem 0;
 }
 
+.newsContainer p {
+  font-size: 1.1rem;
+  max-width: 40ch;
+  margin: .8rem 0;
+}
+
+@media (max-width: 1023px) {
+  .newsContainer h1 {
+    max-width: 20ch;
+  }
+  .newsContainer p {
+    max-width: 30vw;
+  }
+}
+
 @media (max-width: 480px) {
   .newsContainer h1 {
     font-size: 1.5rem;
     max-width: 90vw;
   }
+  .newsContainer p {
+    max-width: 80vw;
+  }
   .newsContainer img {
     max-width: 75vw;
   }
-}
-
-.newsContainer p {
-  font-size: 1.1rem;
-  max-width: 40ch;
-  margin: .8rem 0;
 }
 
 .emergencyContainer {
