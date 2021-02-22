@@ -20,7 +20,7 @@ export default function Home() {
       <Nav />
       <div className={contentStyles.contentContainer}>
         <CovidData />
-
+        
       </div>
       <footer className={styles.footer}>
         <span style={{display: `flex`, alignItems: `center`}}>

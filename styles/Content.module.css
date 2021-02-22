@@ -18,7 +18,35 @@
           align-items: center;
   min-width: 100%;
   max-width: 100%;
-  padding: 0 10vw;
+  padding: 0 5vw;
+}
+
+.contentContainer h1 {
+  font-family: "Karla", "Koulen", sans-serif;
+  font-size: 1.75rem;
+  max-width: 21ch;
+  margin: 1.1rem 0;
+}
+
+.contentContainer img {
+  max-width: 27.5vmax;
+  margin: .5rem 0;
+}
+
+.contentContainer p {
+  font-family: "Overpass", "Hanuman", sans-serif;
+  font-size: 1.1rem;
+  max-width: 40ch;
+  margin: .8rem 0;
+}
+
+@media (max-width: 1023px) {
+  .contentContainer h1 {
+    max-width: 20ch;
+  }
+  .contentContainer p {
+    max-width: 30vw;
+  }
 }
 
 @media (max-width: 480px) {
@@ -38,12 +66,22 @@
             align-items: center;
     padding: 0;
   }
+  .contentContainer h1 {
+    font-size: 1.5rem;
+    max-width: 90vw;
+  }
+  .contentContainer p {
+    max-width: 80vw;
+  }
+  .contentContainer img {
+    max-width: 75vw;
+  }
 }
 
 .dataTable {
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
-  width: 100%;
+  width: 80%;
   margin: 2.5vh 0;
 }
 
@@ -95,6 +133,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 90vw;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -135,47 +174,6 @@
   }
 }
 
-.newsContainer h1 {
-  font-family: "Karla", "Koulen", sans-serif;
-  font-size: 1.75rem;
-  max-width: 21ch;
-  margin: 1.1rem 0;
-}
-
-.newsContainer img {
-  max-width: 27.5vmax;
-  margin: .5rem 0;
-}
-
-.newsContainer p {
-  font-family: "Overpass", "Hanuman", sans-serif;
-  font-size: 1.1rem;
-  max-width: 40ch;
-  margin: .8rem 0;
-}
-
-@media (max-width: 1023px) {
-  .newsContainer h1 {
-    max-width: 20ch;
-  }
-  .newsContainer p {
-    max-width: 30vw;
-  }
-}
-
-@media (max-width: 480px) {
-  .newsContainer h1 {
-    font-size: 1.5rem;
-    max-width: 90vw;
-  }
-  .newsContainer p {
-    max-width: 80vw;
-  }
-  .newsContainer img {
-    max-width: 75vw;
-  }
-}
-
 .emergencyContainer {
   border-collapse: collapse;
 }
@@ -188,6 +186,7 @@
 .emergencyContainer td a {
   padding: 0 .5rem;
   font-weight: 600;
+  font-family: "Overpass", "Hanuman", sans-serif;
 }
 
 .emergencyContainer td a:nth-of-type(2n) {
@@ -271,5 +270,39 @@
     margin: 0;
     margin-right: .5rem;
   }
+}
+
+.productsParent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 90vw;
+}
+
+.productContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 25vw;
+  margin: 1.1rem;
+}
+
+.productContainer img {
+  max-width: 20vmin;
+}
+
+.productContainer span {
+  margin: 0 .5rem;
+}
+
+.productContainer span .price {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #5B2EC5;
 }
 /*# sourceMappingURL=Content.module.css.map */

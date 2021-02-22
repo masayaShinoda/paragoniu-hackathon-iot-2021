@@ -95,6 +95,8 @@ export default function NewsData() {
 
     return (
       <>
+      <div className={styles.contentContainer}>
+
         <div className={styles.newsContainer}>         
            {newsData ? <h1 style={{fontSize: `3.25rem`, margin: `1.1rem auto`, maxWidth: `fit-content`}} id="news">News</h1> : null}
            <div id="newsGrid" className={styles.newsGrid}>    
@@ -119,6 +121,7 @@ export default function NewsData() {
               }        
            </div>
         </div>         
+      </div>
       </>
     )
 }

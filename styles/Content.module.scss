@@ -8,7 +8,35 @@
   align-items: center;
   min-width: 100%;
   max-width: 100%;
-  padding: 0 10vw;
+  padding: 0 5vw;
+  h1 {
+    font-family: $head;
+    // font-weight: 600;
+    font-size: 1.75rem;
+    max-width: 21ch;
+    margin: 1.1rem 0;
+    // margin-top: 2.5rem;
+    // bordeR: 1px solid red; //debug
+  }
+  img {
+    max-width: 27.5vmax;
+    margin: .5rem 0;    
+  }
+  p {
+    font-family: $body;
+    font-size: 1.1rem;
+    max-width: 40ch;
+    margin: .8rem 0;
+  }
+  @media (max-width: $tablet-bp) {
+    h1 {
+      max-width: 20ch;
+    }
+    p {
+      max-width: 30vw;
+      
+    }
+  }
 }
 
 @media (max-width: $mobile-bp) {
@@ -21,13 +49,24 @@
     
     // max-width: 90vw;
 
+    h1 {
+      font-size: 1.5rem;
+      max-width: 90vw;
+    }
+    p {      
+      // border: 1px solid red;
+      max-width: 80vw;
+    }
+    img {
+      max-width: 75vw;
+    }   
   }
 }
 
 .dataTable {
     font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
-    width: 100%;
+    width: 80%;
     margin: 2.5vh 0;
 }
 .dataTable td, .dataTable th {
@@ -63,8 +102,11 @@
 .newsContainer {
   display: flex;
   flex-direction: column;
+  // width: 100%;
+  // border: 1px solid purple; //debug
   .newsGrid {
     display: flex;
+    width: 90vw;
     justify-content: center;
     flex-wrap: wrap;
     // border: 1px solid red;//debug
@@ -72,11 +114,10 @@
       //individual news box
       padding: 1.25vmax;
       // padding-left: 0;
+      // width: 35vw !important; 
       max-width: 35vw;
+
       // border: 1px solid blue; //debug
-      a {
-        // color: 
-      }
     }
     div:nth-of-type(2n) {
       margin-left: 1.5vmax;
@@ -107,47 +148,7 @@
 
   }
     
-  h1 {
-    font-family: $head;
-    // font-weight: 600;
-    font-size: 1.75rem;
-    max-width: 21ch;
-    margin: 1.1rem 0;
-    // margin-top: 2.5rem;
-    // bordeR: 1px solid red; //debug
-  }
-  img {
-    max-width: 27.5vmax;
-    margin: .5rem 0;    
-  }
-  p {
-    font-family: $body;
-    font-size: 1.1rem;
-    max-width: 40ch;
-    margin: .8rem 0;
-  }
-  @media (max-width: $tablet-bp) {
-    h1 {
-      max-width: 20ch;
-    }
-    p {
-      max-width: 30vw;
-      
-    }
-  }
-  @media (max-width: $mobile-bp) {
-    h1 {
-      font-size: 1.5rem;
-      max-width: 90vw;
-    }
-    p {      
-      // border: 1px solid red;
-      max-width: 80vw;
-    }
-    img {
-      max-width: 75vw;
-    }      
-  }
+
 
 }
 
@@ -160,7 +161,7 @@
   td a {
     padding: 0 .5rem;
     font-weight: 600;
-    
+    font-family: $body;    
   }
   td a:nth-of-type(2n) {
     border-left: 1px solid #333333;
@@ -225,3 +226,34 @@
 
   }
 }
+
+// store.js styles
+.productsParent {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 90vw;
+}
+.productContainer {
+  display: flex;
+  max-width:25vw;
+  margin: 1.1rem;
+  // border: 1px solid red; //debug
+  img {
+    max-width: 20vmin;
+  }
+  span {
+    margin: 0 .5rem;
+    .price {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #5B2EC5;
+      // background: #5B2EC5;
+      // max-width: fit-content;
+      
+      // border: 1px solid green; //debug
+    }
+  }
+}
+
+
