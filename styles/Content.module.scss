@@ -260,5 +260,11 @@
   }
 }
 
-
-
+@media (max-width: $mobile-bp) {
+  .aboutSpan {
+    p {
+      padding: 0 10vw;
+      // border: 1px solid red; //debug
+    }
+  }
+}

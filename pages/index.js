@@ -21,8 +21,7 @@ export default function Home() {
       <div className={contentStyles.contentContainer}>
         <img src="/logo-12_result.png"></img>
         <h1 style={{marginTop: 0}}>Information you can trust.</h1>
-        <CovidData />
-        
+        <CovidData />        
       </div>
       <footer className={styles.footer}>
         <span style={{display: `flex`, alignItems: `center`}}>

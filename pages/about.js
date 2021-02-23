@@ -22,14 +22,14 @@ export default function Store() {
 
                 <img width="250px" src="/widescreenlogo.png"></img>
                 {/* <h2>Team Members:</h2> */}
-                <span style={{display: `flex`, flexWrap: `wrap`, justifyContent: `space-evenly`, paddingBottom: `1.25rem`}}>
+                <span className={styles.aboutSpan} style={{display: `flex`, flexWrap: `wrap`, justifyContent: `center`, paddingBottom: `1.25rem`}}>
                     <p style={{fontSize: `1.5rem`, margin:`0 1.1rem`}}>Masaya Shida</p>
                     <p style={{fontSize: `1.5rem`, margin:`0 1.1rem`}}>Sou Sathya Kim</p>
                     <p style={{fontSize: `1.5rem`, margin:`0 1.1rem`}}>Chakriya Sroy</p>
                     <p style={{fontSize: `1.5rem`, margin:`0 1.1rem`}}>Porchou Sok</p>
                     <p style={{fontSize: `1.5rem`, margin:`0 1.1rem`}}>Somavutey Um</p>
                 </span>
-                <p style={{textAlign: `center`,  paddingBottom: `2.5rem`}}>We are a team of freshment students working together to prove that we can all utilize our own unique skills and abilities to help in this global pandemic.</p>
+                <p style={{textAlign: `center`,  paddingBottom: `2.5rem`}}>We are a team of freshmen students working together to prove that we can all utilize our own unique skills and abilities to help in this global pandemic.</p>
                 </span>
             </div>
         </>

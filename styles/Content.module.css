@@ -311,4 +311,10 @@
     max-height: 25vw;
   }
 }
+
+@media (max-width: 480px) {
+  .aboutSpan p {
+    padding: 0 10vw;
+  }
+}
 /*# sourceMappingURL=Content.module.css.map */
