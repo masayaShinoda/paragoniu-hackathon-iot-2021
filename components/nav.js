@@ -41,7 +41,7 @@ export default function Nav() {
             <nav>
                 <a href="/" id="homeBtn"><FontAwesomeIcon icon={faHome} />Home</a>
                 <a href="/news"><FontAwesomeIcon icon={faNewspaper} />News</a>
-                <a href="/store"><FontAwesomeIcon icon={faShoppingCart} />Store</a>    
+                {/* <a href="/store"><FontAwesomeIcon icon={faShoppingCart} />Store</a>     */}
                 <a href="/emergency"><FontAwesomeIcon icon={faExclamationTriangle} />Emergency</a>
                 <a href="/about"><FontAwesomeIcon icon={faQuestionCircle} />About</a>
             </nav>
